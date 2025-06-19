@@ -1,41 +1,66 @@
-<<<<<<< HEAD
-# kampushub
-KampusHub topluluk ve mesajlaşma platformu
-=======
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🏫 KampusHub
 
-## Getting Started
+KampusHub, üniversite öğrencileri için geliştirilen bir topluluk yönetimi ve mesajlaşma platformudur.  
+Kullanıcılar platforma kayıt olabilir, topluluklara katılabilir, özel mesajlaşabilir ve rollerine göre farklı işlemler yapabilir.
 
-First, run the development server:
+## ✨ Özellikler
+
+- 👤 Kayıt ve giriş sistemi (USER / ADMIN rolleri)
+- 👥 Topluluk oluşturma, listeleme ve katılma
+- 💬 Kullanıcılar arası özel mesajlaşma
+- 🔐 Rol tabanlı erişim kontrolü
+- 🛠️ Admin paneli (kullanıcı ve topluluk yönetimi)
+
+## 🛠 Kullanılan Teknolojiler
+
+| Katman         | Teknoloji           |
+|----------------|---------------------|
+| Frontend       | Next.js (App Router) |
+| Backend (API)  | Next.js API Routes + Prisma |
+| Veritabanı     | SQLite (Prisma ORM ile) |
+| Stil           | Tailwind CSS        |
+| Oturum Yönetimi | LocalStorage (JWT benzeri) |
+
+## 🔧 Kurulum
+
+### ⚠️ Önemli: aşağıdaki git clone adımından sonra `kampushub/.env` dosyası oluşturulmalı.
+
+Proje klasöründeki `.env` dosyasına şu kodu ekleyin:
+- DATABASE_URL="file:./dev.db"
 
 ```bash
+git clone https://github.com/mehmetturken/kampushub.git
+cd kampushub
+npm install
+npx prisma migrate dev --name init
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Prisma Studio ile veritabanını incelemek için:
+```bash
+npx prisma studio
+```
 
-## Learn More
+## 📂 Önemli Sayfalar
+- Sayfa	Açıklama
+- /register	Yeni kullanıcı kaydı
+- /login	Giriş ekranı
+- /profile	Kullanıcı bilgileri
+- /communities	Topluluk listesi
+- /communities/create	Topluluk oluşturma
+- /messages	Özel mesajlaşma ekranı
+- /admin	Kullanıcı yönetimi (admin)
+- /admin/communities	Topluluk onaylama (admin)
 
-To learn more about Next.js, take a look at the following resources:
+## 🔐 Rollere Göre Yetkiler
+- USER → Topluluklara katılır, mesajlaşır, profilini düzenler
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- ADMIN → Kullanıcıları yönetir, toplulukları onaylar
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+👨‍💻 Geliştirici
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
->>>>>>> bb73447 (Initial commit from Create Next App)
+- Geliştirici: Mehmet Mücahit TÜRKEN
+- Ders:  İnternet Programcılığı II
+- Teslim: 20 Haziran 2025
