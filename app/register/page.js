@@ -31,7 +31,7 @@ export default function RegisterPage() {
             }
 
             alert('Kayıt başarılı!');
-            // İstersen login sayfasına yönlendirebilirsin
+
         } catch (err) {
             console.error('İstek hatası:', err);
             alert('Sunucuya ulaşılamadı.');

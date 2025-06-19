@@ -31,7 +31,7 @@ export default function LoginPage() {
                 return;
             }
 
-            login(result.user); // burada context ile oturumu başlatıyoruz
+            login(result.user);
             alert('Giriş başarılı!');
         } catch (err) {
             alert('Sunucu hatası.');

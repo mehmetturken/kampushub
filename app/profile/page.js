@@ -34,7 +34,7 @@ export default function ProfilePage() {
 
         alert('Bilgiler güncellendi.');
 
-        // Yeni veriyi auth context’e de kaydet
+
         login(result.user);
     };
 

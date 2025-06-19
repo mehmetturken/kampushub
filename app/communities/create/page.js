@@ -36,7 +36,7 @@ export default function CreateCommunityPage() {
         }
 
         alert('Topluluk başarıyla oluşturuldu! Admin onayı bekleniyor.');
-        router.push('/communities'); // liste sayfasına yönlendirme (henüz yapmadık)
+        router.push('/communities');
     };
 
     return (
